@@ -1,3 +1,6 @@
+//for the class
+import React, { Component } from "react";
+
 import logo from "./logo.svg";
 import "./App.css";
 
@@ -6,9 +9,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>hello world lala lorem </code> and save to reload.
-        </p>
+        {WelcomeFunction("mauricio")}
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -22,4 +23,14 @@ function App() {
   );
 }
 
+//Stateless Functional Component (es6 class)
 export default App;
+class WelcomeClass extends React.Component {
+  render() {
+    return <h1>Hello,{this.props.name}</h1>;
+  }
+}
+//javascript function
+function WelcomeFunction(props) {
+  return <h1>Hola, {props.name}</h1>;
+}
